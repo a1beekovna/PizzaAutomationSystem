@@ -11,7 +11,7 @@
          fx:controller="com.pizzeria.controllers.MainController">
     
     <!-- ==================== ВКЛАДКА МЕНЮ ==================== -->
-    <Tab text="🍕 Меню">
+    <Tab text="Меню">
         <VBox spacing="15" style="-fx-padding: 20;">
             <HBox alignment="CENTER" spacing="10">
                 <Label text="Меню пиццерии" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #D32F2F;"/>
@@ -21,9 +21,9 @@
                 <Label text="Фильтр по категории:" style="-fx-font-weight: bold;"/>
                 <ComboBox fx:id="categoryFilter" prefWidth="200"/>
                 <Region HBox.hgrow="ALWAYS"/>
-                <Button text="➕ Новый заказ" onAction="#handleNewOrder" 
+                <Button text="Новый заказ" onAction="#handleNewOrder" 
                         style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;"/>
-                <Button text="📋 Заказы" onAction="#handleViewOrders" 
+                <Button text="Заказы" onAction="#handleViewOrders" 
                         style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;"/>
             </HBox>
             
@@ -49,7 +49,7 @@
         <HBox spacing="20" style="-fx-padding: 20;">
             <!-- Левая панель - выбор пицц -->
             <VBox spacing="15" HBox.hgrow="ALWAYS" style="-fx-padding: 15; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5;">
-                <Label text="📋 Выберите пиццы" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #4CAF50;"/>
+                <Label text="Выберите пиццы" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #4CAF50;"/>
                 
                 <HBox spacing="10" alignment="CENTER_LEFT">
                     <TextField fx:id="searchPizzaField" promptText="🔍 Поиск пиццы..." prefWidth="250"/>
@@ -62,7 +62,7 @@
                 <HBox spacing="10" alignment="CENTER">
                     <Label text="Количество:"/>
                     <Spinner fx:id="quantitySpinner" prefWidth="80"/>
-                    <Button fx:id="addToCartBtn" text="➕ В корзину" onAction="#handleAddToCart"
+                    <Button fx:id="addToCartBtn" text="В корзину" onAction="#handleAddToCart"
                             style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
                 </HBox>
             </VBox>
@@ -74,9 +74,9 @@
                 <ListView fx:id="cartListView" prefHeight="200" style="-fx-border-color: #ddd;"/>
                 
                 <HBox spacing="10" alignment="CENTER">
-                    <Button text="❌ Удалить" onAction="#handleRemoveFromCart"
+                    <Button text="Удалить" onAction="#handleRemoveFromCart"
                             style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
-                    <Button text="🗑 Очистить" onAction="#handleClearCart"
+                    <Button text="Очистить" onAction="#handleClearCart"
                             style="-fx-background-color: #9E9E9E; -fx-text-fill: white;"/>
                 </HBox>
                 
@@ -97,7 +97,7 @@
                 
                 <Separator/>
                 
-                <Label text="🚚 Доставка" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label text="Доставка" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
                 
                 <HBox spacing="15">
                     <RadioButton fx:id="pickupRadio" text="Самовывоз"/>
@@ -108,7 +108,7 @@
                 
                 <Separator/>
                 
-                <Label text="💳 Оплата" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label text="Оплата" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
                 <ComboBox fx:id="paymentMethodCombo" prefWidth="200" promptText="Способ оплаты"/>
                 
                 <TextArea fx:id="orderNotesArea" promptText="Примечания к заказу..." prefHeight="60"/>
@@ -119,23 +119,23 @@
                     <Label fx:id="totalLabel" text="Итого: 0₸" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #D32F2F;"/>
                 </HBox>
                 
-                <Button fx:id="placeOrderBtn" text="✅ Оформить заказ" onAction="#handlePlaceOrder" prefWidth="360"
+                <Button fx:id="placeOrderBtn" text="Оформить заказ" onAction="#handlePlaceOrder" prefWidth="360"
                         style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 15;"/>
             </VBox>
         </HBox>
     </Tab>
     
     <!-- ==================== ВКЛАДКА ЗАКАЗЫ ==================== -->
-    <Tab text="📋 Заказы">
+    <Tab text="Заказы">
         <VBox spacing="15" style="-fx-padding: 20;">
             <HBox alignment="CENTER" spacing="10">
-                <Label text="📊 Управление заказами" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2196F3;"/>
+                <Label text="Управление заказами" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2196F3;"/>
             </HBox>
             
             <HBox spacing="15" alignment="CENTER_LEFT">
                 <Label text="Фильтр по статусу:" style="-fx-font-weight: bold;"/>
                 <ComboBox fx:id="orderStatusFilter" prefWidth="200" promptText="Все статусы"/>
-                <Button text="🔄 Обновить" onAction="#handleRefreshOrders"
+                <Button text="Обновить" onAction="#handleRefreshOrders"
                         style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
                 <Region HBox.hgrow="ALWAYS"/>
                 <Label fx:id="ordersCountLabel" text="Заказов: 0" style="-fx-font-weight: bold;"/>
@@ -157,7 +157,7 @@
                 
                 <!-- Детали заказа -->
                 <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: white; -fx-border-color: #ddd;">
-                    <Label text="📝 Детали заказа" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text="Детали заказа" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
                     
                     <TextArea fx:id="orderDetailsArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS"
                               style="-fx-font-family: monospace;"/>
@@ -166,23 +166,23 @@
                     
                     <Label text="Изменить статус:" style="-fx-font-weight: bold;"/>
                     <HBox spacing="10" alignment="CENTER">
-                        <Button text="📥 Принят" onAction="#handleStatusConfirmed"
+                        <Button text="Принят" onAction="#handleStatusConfirmed"
                                 style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
-                        <Button text="👨‍🍳 Готовится" onAction="#handleStatusPreparing"
+                        <Button text="Готовится" onAction="#handleStatusPreparing"
                                 style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
-                        <Button text="🔥 Выпекается" onAction="#handleStatusBaking"
+                        <Button text="Выпекается" onAction="#handleStatusBaking"
                                 style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
                     </HBox>
                     <HBox spacing="10" alignment="CENTER">
-                        <Button text="✅ Готов" onAction="#handleStatusReady"
+                        <Button text="Готов" onAction="#handleStatusReady"
                                 style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
-                        <Button text="🚗 Доставляется" onAction="#handleStatusDelivering"
+                        <Button text="Доставляется" onAction="#handleStatusDelivering"
                                 style="-fx-background-color: #9C27B0; -fx-text-fill: white;"/>
-                        <Button text="🏁 Завершен" onAction="#handleStatusCompleted"
+                        <Button text="Завершен" onAction="#handleStatusCompleted"
                                 style="-fx-background-color: #607D8B; -fx-text-fill: white;"/>
                     </HBox>
                     <HBox alignment="CENTER">
-                        <Button text="❌ Отменить заказ" onAction="#handleCancelOrder"
+                        <Button text="Отменить заказ" onAction="#handleCancelOrder"
                                 style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
                     </HBox>
                 </VBox>
@@ -191,38 +191,38 @@
     </Tab>
     
     <!-- ==================== ВКЛАДКА СТАТИСТИКА ==================== -->
-    <Tab text="📈 Статистика">
+    <Tab text="Статистика">
         <VBox spacing="20" style="-fx-padding: 20;">
             <HBox alignment="CENTER">
-                <Label text="📊 Статистика и отчеты" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #9C27B0;"/>
+                <Label text="Статистика и отчеты" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #9C27B0;"/>
             </HBox>
             
             <!-- Карточки статистики -->
             <HBox spacing="20" alignment="CENTER">
                 <VBox alignment="CENTER" spacing="5" prefWidth="200" prefHeight="120"
                       style="-fx-background-color: #4CAF50; -fx-background-radius: 10; -fx-padding: 20;">
-                    <Label text="📦" style="-fx-font-size: 30px;"/>
+                    <Label text="" style="-fx-font-size: 30px;"/>
                     <Label fx:id="totalOrdersLabel" text="0" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
                     <Label text="Всего заказов" style="-fx-text-fill: white;"/>
                 </VBox>
                 
                 <VBox alignment="CENTER" spacing="5" prefWidth="200" prefHeight="120"
                       style="-fx-background-color: #2196F3; -fx-background-radius: 10; -fx-padding: 20;">
-                    <Label text="📅" style="-fx-font-size: 30px;"/>
+                    <Label text="" style="-fx-font-size: 30px;"/>
                     <Label fx:id="todayOrdersLabel" text="0" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
                     <Label text="Заказов сегодня" style="-fx-text-fill: white;"/>
                 </VBox>
                 
                 <VBox alignment="CENTER" spacing="5" prefWidth="200" prefHeight="120"
                       style="-fx-background-color: #FF9800; -fx-background-radius: 10; -fx-padding: 20;">
-                    <Label text="💰" style="-fx-font-size: 30px;"/>
+                    <Label text="" style="-fx-font-size: 30px;"/>
                     <Label fx:id="totalRevenueLabel" text="0₸" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
                     <Label text="Общая выручка" style="-fx-text-fill: white;"/>
                 </VBox>
                 
                 <VBox alignment="CENTER" spacing="5" prefWidth="200" prefHeight="120"
                       style="-fx-background-color: #9C27B0; -fx-background-radius: 10; -fx-padding: 20;">
-                    <Label text="📈" style="-fx-font-size: 30px;"/>
+                    <Label text="" style="-fx-font-size: 30px;"/>
                     <Label fx:id="todayRevenueLabel" text="0₸" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
                     <Label text="Выручка сегодня" style="-fx-text-fill: white;"/>
                 </VBox>
@@ -233,69 +233,69 @@
             <!-- Статистика по статусам -->
             <HBox spacing="30" alignment="CENTER">
                 <VBox spacing="10" style="-fx-padding: 20; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5;">
-                    <Label text="📊 Заказы по статусам" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text=" Заказы по статусам" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
                     <GridPane hgap="20" vgap="10">
-                        <Label text="⏳ В ожидании:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <Label text=" В ожидании:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
                         <Label fx:id="pendingCountLabel" text="0" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
                         
-                        <Label text="✅ Подтверждено:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <Label text=" Подтверждено:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
                         <Label fx:id="confirmedCountLabel" text="0" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
                         
-                        <Label text="👨‍🍳 Готовится:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                        <Label text=" Готовится:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
                         <Label fx:id="preparingCountLabel" text="0" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                         
-                        <Label text="🔥 Выпекается:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                        <Label text=" Выпекается:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
                         <Label fx:id="bakingCountLabel" text="0" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
                         
-                        <Label text="📦 Готов:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                        <Label text=" Готов:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
                         <Label fx:id="readyCountLabel" text="0" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                         
-                        <Label text="🚗 Доставляется:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                        <Label text=" Доставляется:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
                         <Label fx:id="deliveringCountLabel" text="0" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
                         
-                        <Label text="🏁 Завершено:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                        <Label text=" Завершено:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
                         <Label fx:id="completedCountLabel" text="0" style="-fx-font-weight: bold; -fx-text-fill: #4CAF50;" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
                         
-                        <Label text="❌ Отменено:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                        <Label text=" Отменено:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
                         <Label fx:id="cancelledCountLabel" text="0" style="-fx-font-weight: bold; -fx-text-fill: #f44336;" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
                     </GridPane>
                 </VBox>
                 
                 <VBox spacing="10" style="-fx-padding: 20; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5;">
-                    <Label text="🍕 Популярные пиццы" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text=" Популярные пиццы" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
                     <ListView fx:id="popularPizzasListView" prefHeight="250" prefWidth="300"/>
                 </VBox>
             </HBox>
             
             <HBox alignment="CENTER" spacing="20">
-                <Button text="🔄 Обновить статистику" onAction="#handleRefreshStatistics"
+                <Button text=" Обновить статистику" onAction="#handleRefreshStatistics"
                         style="-fx-background-color: #9C27B0; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 30;"/>
             </HBox>
         </VBox>
     </Tab>
     
     <!-- ==================== ВКЛАДКА НАСТРОЙКИ ==================== -->
-    <Tab text="⚙️ Настройки">
+    <Tab text=" Настройки">
         <HBox spacing="20" style="-fx-padding: 20;">
             <!-- Управление меню -->
             <VBox spacing="15" HBox.hgrow="ALWAYS" style="-fx-padding: 15; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5;">
-                <Label text="🍕 Управление меню" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FF9800;"/>
+                <Label text=" Управление меню" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FF9800;"/>
                 
                 <ListView fx:id="settingsPizzaListView" VBox.vgrow="ALWAYS" style="-fx-border-color: #ddd;"/>
                 
                 <HBox spacing="10" alignment="CENTER">
-                    <Button text="➕ Добавить" onAction="#handleAddPizza"
+                    <Button text=" Добавить" onAction="#handleAddPizza"
                             style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
-                    <Button text="✏️ Редактировать" onAction="#handleEditPizza"
+                    <Button text=" Редактировать" onAction="#handleEditPizza"
                             style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
-                    <Button text="🗑 Удалить" onAction="#handleDeletePizza"
+                    <Button text=" Удалить" onAction="#handleDeletePizza"
                             style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
                 </HBox>
             </VBox>
             
             <!-- Форма редактирования пиццы -->
             <VBox spacing="15" prefWidth="400" style="-fx-padding: 15; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5;">
-                <Label fx:id="pizzaFormTitle" text="📝 Добавить пиццу" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <Label fx:id="pizzaFormTitle" text=" Добавить пиццу" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
                 
                 <GridPane hgap="10" vgap="10">
                     <Label text="Название:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
@@ -326,15 +326,15 @@
                 <Separator/>
                 
                 <HBox spacing="10" alignment="CENTER">
-                    <Button fx:id="savePizzaBtn" text="💾 Сохранить" onAction="#handleSavePizza"
+                    <Button fx:id="savePizzaBtn" text=" Сохранить" onAction="#handleSavePizza"
                             style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
-                    <Button text="🔄 Сбросить" onAction="#handleResetPizzaForm"
+                    <Button text=" Сбросить" onAction="#handleResetPizzaForm"
                             style="-fx-background-color: #9E9E9E; -fx-text-fill: white;"/>
                 </HBox>
                 
                 <Separator/>
                 
-                <Label text="⚙️ Общие настройки" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label text=" Общие настройки" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
                 
                 <HBox spacing="10" alignment="CENTER_LEFT">
                     <CheckBox fx:id="darkModeCheck" text="Тёмная тема"/>
@@ -351,7 +351,7 @@
                 
                 <Separator/>
                 
-                <Label text="ℹ️ О программе" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <Label text="ℹ О программе" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
                 <Label text="Pizza Automation System v2.0" style="-fx-font-style: italic;"/>
                 <Label text="© 2024 Pizzeria Management" style="-fx-text-fill: #666;"/>
             </VBox>
